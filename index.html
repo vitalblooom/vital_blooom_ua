@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Жіноча косметика</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="index.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,20 +31,14 @@
             width: 100%; /* Розтягування на всю ширину */
             
         }
-/*=================================================*/
-.banner {
-    margin-top: 70px; /* Відступ, щоб банер не накладався на хедер */
+
+        .img_baner{
             width: 100%;
-            height: 300px;
-            background: url('banner.jpg') no-repeat center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
+            height: 100%;
+            object-fit: cover; /* Заповнює контейнер без спотворень */
         }
+/*=================================================*/
+
         .container {
             width: 90%;
             max-width: 1200px;
@@ -171,13 +166,19 @@
         </div>
     </header>
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
     
-    <div class="banner">Ласкаво просимо в світ краси!</div>
+    <div class="banner">
+        <img  class="img_baner"  src="img_for_index_html/img_new_nalance_990_usa_2.JPEG" alt="">
+    </div>
 
     <main class="container">
         <section class="categories">
-            <h2>Категорії товарів</h2>
             <div class="grid">
                 <div class="card">Макіяж</div>
                 <div class="card">Догляд за шкірою</div>
@@ -207,60 +208,6 @@
             <p>© 2025 Vital Bloom</p>
         </div>
     </footer>
-
-
-
-
-<!---------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------------------->
-
-    <script>
-        // Масив товарів (назва + посилання на сторінку)
-        const products = [
-            { name: "Спрей Bare Vanilla", url: "product_bare_vanilla.html" },
-            { name: "Помада Chanel", url: "product_chanel_lipstick.html" },
-            { name: "Крем для обличчя Nivea", url: "product_nivea_cream.html" },
-            { name: "Туш для вій L'Oréal", url: "product_loreal_mascara.html" },
-            { name: "Парфуми Dior", url: "product_dior_perfume.html" },
-            { name: "Тонік для обличчя Vichy", url: "product_vichy_tonic.html" },
-            { name: "Шампунь Pantene", url: "product_pantene_shampoo.html" },
-            { name: "Сонцезахисний крем La Roche-Posay", url: "product_laroche_sunscreen.html" }
-        ];
-
-        function search() {
-            const query = document.getElementById("search-input").value.toLowerCase();
-            const resultsDiv = document.getElementById("search-results");
-            const resultsList = document.getElementById("search-list");
-
-            // Фільтрація товарів за запитом
-            const results = products.filter(product => product.name.toLowerCase().includes(query));
-
-            if (query.length === 0 || results.length === 0) {
-                resultsDiv.style.display = "none";
-                return;
-            }
-
-            resultsDiv.style.display = "block";
-            resultsList.innerHTML = "";
-
-            results.forEach(product => {
-                const li = document.createElement("li");
-                li.textContent = product.name;
-                li.onclick = function() {
-                    window.location.href = product.url; // Перехід на сторінку товару
-                };
-                resultsList.appendChild(li);
-            });
-        }
-
-        // Закриває список результатів, якщо клік поза пошуком
-        document.addEventListener("click", function(event) {
-            const searchBar = document.querySelector(".search-bar");
-            if (!searchBar.contains(event.target)) {
-                document.getElementById("search-results").style.display = "none";
-            }
-        });
-    </script>
+ 
 </body>
 </html>
