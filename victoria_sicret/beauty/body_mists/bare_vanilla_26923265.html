@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Жіноча косметика</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="../../index.js"></script>
+    <script src="../../../index.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,6 +14,14 @@
             background-color: #ffffff;
             color: #333;
         }
+        a {
+    text-decoration: none; /* Забираємо підкреслення */
+    color: black; /* Задаємо чорний колір */
+}
+
+a:visited {
+    color: black; /* Для відвіданих посилань також чорний колір */
+}
 
         .img_logo_vital_blooom{
         width: 100px;
@@ -62,6 +70,20 @@
             text-align: center;
             margin-top: 40px;
         }
+
+        .footer-links {
+            
+    display: flex;
+    justify-content: center; /* Центрує елементи по горизонталі */
+    align-items: center; /* Центрує по вертикалі (якщо потрібно) */
+    gap: 30px; /* Відстань між елементами */
+}
+
+.footer-links i{
+    font-size: 19px;
+}
+
+       
        
 /*=================================================*/
 .search-bar {
@@ -171,6 +193,7 @@
 
         .product-details {
             width: 45%;
+
         }
 
         .product-details h1 {
@@ -205,8 +228,78 @@
             background-color: #d81b60;
         }
 
+        .size-toggle {
+            user-select: none; /* Заборона виділення тексту */
+            outline: none; /* Видаляє контур при фокусуванні */
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    
+}
+
+.plus {
+    transition: transform 0.3s ease-in-out; /* Плавний перехід */
+    margin-left: 5px;
+    font-size: 20px;
+    cursor: pointer; /* Курсор змінюється на "руку" */
+    user-select: none; /* Заборона виділення тексту */
+    outline: none; /* Видаляє контур при фокусуванні */
+}
+
+/* Додаємо клас active при натисканні */
+.plus.active {
+    transform: rotate(180deg); /* Поворот на 180 градусів */
+}
+
+
         /*/////////////////////////////////////*/
 
+       
+    .size-options {
+        display: block; /* Ось тут змінено з 'none' на 'block', але з max-height будемо управляти видимістю */
+    max-height: 0; /* Початкова висота 0 для прихованого стану */
+    overflow: hidden; /* Приховуємо вміст, що виходить за межі */
+    transition: max-height 0.5s ease-out; /* Плавна анімація */
+    margin-top: 10px;
+    }
+    .size-options.active {
+    max-height: 100px; /* Достатньо велика висота для видимих кнопок */
+}
+
+
+
+    .size-options button{
+        background-color: #f9c2cf;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+   
+    }
+
+    .size-options button:hover{
+        background-color: #d81b60;
+    }
+
+    .size-options.active {
+        display: flex;
+        gap: 10px;
+    }
+
+   
+
+    /*===============================================*/
+
+    
+
+    
+
+
+        
         /* Медіазапит для екрану до 768px */
 @media screen and (max-width: 768px) {
     .search-bar {
@@ -277,7 +370,7 @@
 </head>
 <body>
     <header>
-       <a href="../../index.html"> <img class="img_logo_vital_blooom" src="../../img_for_index_html/IMG_9732-Photoroom.png" alt=""></a>
+       <a href="../../../index.html"> <img class="img_logo_vital_blooom" src="../../../img_for_index_html/IMG_9732-Photoroom.png" alt=""></a>
         <div class="search-bar">
             <input type="text" id="search-input" placeholder="Пошук товару..." onkeyup="search()">
             <button onclick="search()"><i class='bx bx-search'></i></button>
@@ -308,10 +401,21 @@
         </div>
 
         <div class="product-details">
-            <h1>Спрей Bare Vanilla Bliss</h1>
-            <div class="price">599 ₴</div>
+            <h1>Спрей Victorias Secret Bare Vanilla Bliss</h1>
+            <div class="price">8 890 ₴</div>
 
-             <div class = "size">Розмір <b>Один розмір</b></div>
+            Роміри <b>Один розмір</b>
+
+            <!--<div class="size-container">
+                <div class="size-toggle" onclick="toggleSizeDropdown()">
+                    Розміри <span class="plus">+</span>
+                </div>
+                <div class="size-options">
+                    <button onclick="updatePrice(8890)">30 ml</button>
+                    <button onclick="updatePrice(14950)">50 ml</button>
+                    <button onclick="updatePrice(20480)">100 ml</button>
+                </div>
+            </div>-->
 
              <br>
 
@@ -326,6 +430,8 @@
                     ПРИМІТКИ: Вітерна фіолетова, ванільна орхідея <br>
                     250 мл/8,4 унції. <br>
                     Домашній <br>
+                    <br>
+                    Art: 26923265
                 
                 </p>
             <button class="add-to-cart">Додати в кошик</button>
@@ -338,16 +444,41 @@
     <footer>
        
         <div class="footer-links">
-            <a href="#">Контакти</a>
-            <a href="#">Зворотній зв’язок</a>
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
+          
+            <a href="#"><i class='bx bxl-telegram' ></i>Зворотній зв’язок</a> 
+            <a href="#"><i class='bx bxl-instagram'></i> Instagram</a>
+        </div>
             <p>© 2025 Vital Bloom</p>
         </div>
     </footer>
  
 
     <script>
+
+document.querySelector('.plus').addEventListener('click', function() {
+    this.classList.toggle('active'); // Додає/видаляє клас active
+});
+
+
+
+        function toggleSizeDropdown() {
+        document.querySelector('.size-options').classList.toggle('active');
+    }
+
+    function updatePrice(price) {
+        document.querySelector('.price').textContent = price + ' ₴';
+    }
+
+
+    /**/
+    function updatePrice(price) {
+    // Форматуємо число з пробілами
+    const formattedPrice = price.toLocaleString('uk-UA');  // Форматування числа для української локалізації
+    document.querySelector('.price').textContent = formattedPrice + ' ₴';
+}
+
+
+
         function changeImage(thumbnail) {
             // Отримуємо головне зображення
             document.getElementById('main-image').src = thumbnail.src;
