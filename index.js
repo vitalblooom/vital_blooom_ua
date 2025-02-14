@@ -4,8 +4,8 @@ const baseURL = window.location.origin;
 // Масив товарів із абсолютними шляхами
 const products = [
     
-    { name: "Спрей Victorias Secret Bare Vanilla Bliss", url: "../../../victoria_sicret/beauty/body_mists/bare_vanilla_26923265.html" },
-    { name: "Парфюм Tom Ford Lost Cherry", url: "../../tom_ford/parfume/tom_ford_lost_chery_ 945376.html" },
+    { name: "Спрей Victorias Secret Bare Vanilla Bliss", url: "/../../../victoria_sicret/beauty/body_mists/bare_vanilla_26923265.html" },
+    { name: "Парфюм Tom Ford Lost Cherry", url: "/../../tom_ford/parfume/tom_ford_lost_chery_ 945376.html" },
     { name: "Крем для обличчя Nivea", url: "/product_nivea_cream.html" },
     { name: "Туш для вій L'Oréal", url: "/product_loreal_mascara.html" },
     { name: "Парфуми Dior", url: "/product_dior_perfume.html" },
