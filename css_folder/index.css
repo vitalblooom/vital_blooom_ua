@@ -146,6 +146,13 @@ color: #000000; /* Встановлюємо темний колір іконки
 /* Медіазапит для екрану до 768px */
 @media screen and (max-width: 768px) {
 
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        gap: 10px; /* Відстань між елементами */
+    }
+
 .card {
 max-width: 100px; /* Максимальна ширина кнопки */
 }

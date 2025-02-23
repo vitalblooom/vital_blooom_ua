@@ -344,6 +344,15 @@ transform: rotate(180deg); /* Поворот на 180 градусів */
 
 /* Медіазапит для екрану до 768px */
 @media screen and (max-width: 768px) {
+
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Відстань між елементами */
+    }
+
 .search-bar {
 max-width: 220px;
 padding: 5px 10px;
@@ -383,6 +392,15 @@ color: #000000; /* Встановлюємо темний колір іконки
 }
 
 @media screen and (max-width: 480px) {
+
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        gap: 10px; /* Відстань між елементами */
+    }
+    
 .search-bar {
 max-width: 180px; /* Зменшуємо ширину на дуже маленьких екранах */
 padding: 5px 8px;
