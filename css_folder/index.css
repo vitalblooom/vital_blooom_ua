@@ -211,10 +211,12 @@ color: #000000; /* Встановлюємо темний колір іконки
     max-width: calc(25% - 16px);
 }
 .product-item img {
-    width: 100%;
+    
+    width: 70%;
     height: auto;
     border-radius: 8px;
     display: block;
+    margin: 0 auto; /* Центрування */
 }
 
 .product-item img {
