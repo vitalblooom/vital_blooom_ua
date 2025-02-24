@@ -21,6 +21,7 @@ width: 100px;
 
 
 header {
+    z-index: 999;
     background-color: #f9c2cf;
     padding: 15px 20px;   /*15px  20px*/
     display: flex;
@@ -189,3 +190,34 @@ color: #000000; /* Встановлюємо темний колір іконки
 }
 }
 
+
+
+
+/*------------плитки-------*/
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.product-item {
+    flex: 1 1 calc(25% - 16px); /* 4 фото в ряд на великих екранах */
+    max-width: calc(25% - 16px);
+}
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+@media (max-width: 768px) {
+    .product-item {
+        flex: 1 1 calc(50% - 16px); /* 2 фото в ряд на мобільних */
+        max-width: calc(50% - 16px);
+    }
+}

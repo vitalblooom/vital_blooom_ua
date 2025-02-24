@@ -27,15 +27,34 @@
        <a href="tom_ford/parfume/tom_ford_lost_chery_ 945376.html"> <img  class="img_baner"  src="img_for_index_html/IMG_9745.JPEG" alt=""></a>
     </div>
 
-    <main class="container">
+
+
+    <br>
+   
+
+    <!--<main class="container">
         <section class="categories">
             <div class="grid">
                 <div class="card"><i class='bx bxs-leaf'> </i> Краса</div>
                 <div class="card"><i class='bx bx-shopping-bag'></i> Аксесуари</div>
                 <div class="card"><i class='bx bxs-t-shirt' ></i> Одяг</div>
             </div>
-        </section>
+        </section>-->
 
+        <div class="product-grid" id="productGrid">
+            <div class="product-item">
+                <img src="https://de.victoriassecret.com/p/1000x1333/png/zz/25/02/07/02/112542122457_OM_F.jpg" alt="Товар 1">
+            </div>
+            <div class="product-item">
+                <img src="https://de.victoriassecret.com/p/1000x1333/png/zz/25/02/07/02/112542122457_OM_F.jpg" alt="Товар 2">
+            </div>
+            <div class="product-item">
+                <img src="https://de.victoriassecret.com/p/1000x1333/png/zz/25/02/07/02/112542122457_OM_F.jpg" alt="Товар 3">
+            </div>
+            <div class="product-item">
+                <img src="https://de.victoriassecret.com/p/1000x1333/png/zz/25/02/07/02/112542122457_OM_F.jpg" alt="Товар 4">
+            </div>
+        </div>
        
     </main>
 
@@ -66,6 +85,26 @@
             .then(data => {
                 document.getElementById('footer').innerHTML = data;
             });
+
+
+
+//налаштування для плиток екфект 
+document.addEventListener("DOMContentLoaded", function () {
+            const productGrid = document.getElementById("productGrid");
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        productGrid.style.opacity = "1";
+                        productGrid.style.transform = "translateY(0)";
+                    } else {
+                        productGrid.style.opacity = "0";
+                        productGrid.style.transform = "translateY(50px)";
+                    }
+                });
+            }, { threshold: 0.3 });
+            observer.observe(productGrid);
+        });
+
     </script>
      
 </body>
