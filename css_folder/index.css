@@ -196,6 +196,7 @@ color: #000000; /* Встановлюємо темний колір іконки
 /*------------плитки-------*/
 
 .product-grid {
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -203,7 +204,7 @@ color: #000000; /* Встановлюємо темний колір іконки
     padding: 20px;
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
 .product-item {
     flex: 1 1 calc(25% - 16px); /* 4 фото в ряд на великих екранах */
@@ -214,6 +215,14 @@ color: #000000; /* Встановлюємо темний колір іконки
     height: auto;
     border-radius: 8px;
     display: block;
+}
+
+.product-item img {
+    transition: transform 0.2s ease-in-out;
+}
+
+.product-item img:hover {
+    transform: scale(1.03);
 }
 @media (max-width: 768px) {
     .product-item {
