@@ -26,6 +26,7 @@ const products = [
 
     /*PARFUME----------------------------------*/ 
     { name: "Парфюм Tom Ford Lost Cherry", url: "https://vitalblooom.github.io/vital_blooom_ua/tom_ford/parfume/tom_ford_lost_chery_%20945376.html" },
+    { name: "Парфюм Tom  Vanilla sex", url: "https://vitalblooom.github.io/vital_blooom_ua/tom_ford/parfume/tom_ford_vanilla_sex_1590541.html" },
 
 
     /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
