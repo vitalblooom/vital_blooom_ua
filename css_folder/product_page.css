@@ -192,6 +192,10 @@ color: #000000; /* Встановлюємо темний колір іконки
     margin-bottom: 15px;
 }
 
+.characteristics-perfume{
+    font-size: 20px;
+}
+
 .product-details .price {
     font-size: 1.5em;
     color: #000000;
