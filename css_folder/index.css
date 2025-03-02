@@ -21,6 +21,7 @@ width: 100px;
 
 
 header {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 999;
     background-color: #f9c2cf;
     padding: 15px 20px;   /*15px  20px*/
