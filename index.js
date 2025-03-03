@@ -30,7 +30,10 @@ const products = [
     { name: "Парфюм Tom Ford Tobacco Vanille", url: "https://vitalblooom.github.io/vital_blooom_ua/tom_ford/parfume/tom_ford_tobaco_vanille_518789.html" },
     { name: "Парфюм Tom Ford Neroli Portofino", url: "https://vitalblooom.github.io/vital_blooom_ua/tom_ford/parfume/tom_ford_NEROLI_PORTOFINO_518020.html" },
     { name: "Парфюм Tom Ford Fucking Fabulous", url: "https://vitalblooom.github.io/vital_blooom_ua/tom_ford/parfume/tom_ford_FUCKING%20FABULOUS_806932.html" },
-   
+    { name: "Парфюм Tom Ford Soleil Blanc", url: "https://vitalblooom.github.io/vital_blooom_ua/tom_ford/parfume/tom_ford_SOLEIL%20BLANC_545917.html" },
+    { name: "Парфюм Tom Ford Ombre Leather", url: "https://vitalblooom.github.io/vital_blooom_ua/tom_ford/parfume/tom_ford_OMBRE_LEATHER_849567.html" },
+    { name: "Парфюм Tom Ford Electric Cherry", url: "https://vitalblooom.github.io/vital_blooom_ua/tom_ford/parfume/tom_ford_ELECTRIC_CHERRY_1438904.html" },
+    /*{ name: "Парфюм Tom Ford ", url: "" },*/ 
 
 
     /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
