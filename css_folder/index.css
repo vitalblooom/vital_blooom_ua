@@ -119,16 +119,21 @@ cursor: pointer;
 font-size: 18px;
 color: #000000; /* Встановлюємо темний колір іконки */
 }
+
+
+
+
 .search-results {
+    font-size: 14.5px;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     background: #fff;
-    border: 1px solid #ddd;
+   border: 1px solid #edeaea;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     display: none;
-    border-radius: 5px;
+    border-radius: 25px;
     z-index: 1000;
 }
 .search-results ul {
@@ -137,13 +142,18 @@ color: #000000; /* Встановлюємо темний колір іконки
     padding: 0;
 }
 .search-results li {
+    border-radius: 25px;
     padding: 10px;
     cursor: pointer;
     border-bottom: 1px solid #eee;
 }
 .search-results li:hover {
-    background: #f0f0f0;
+    border-radius: 25px;
+    background: #f2ccd5;
 }
+
+
+
 
 /* Медіазапит для екрану до 768px */
 @media screen and (max-width: 768px) {

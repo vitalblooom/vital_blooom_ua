@@ -56,6 +56,7 @@ const products = [
 ];
 
 
+/*
 function search() {
     const query = document.getElementById("search-input").value.toLowerCase();
     const resultsDiv = document.getElementById("search-results");
@@ -90,3 +91,43 @@ document.addEventListener("click", function(event) {
         document.getElementById("search-results").style.display = "none";
     }
 });
+*/
+
+function search() {
+    const query = document.getElementById("search-input").value.toLowerCase();
+    const resultsDiv = document.getElementById("search-results");
+    const resultsList = document.getElementById("search-list");
+
+    // Фільтрація товарів за запитом
+    const results = products.filter(product => product.name.toLowerCase().includes(query));
+
+    if (query.length === 0 || results.length === 0) {
+        resultsDiv.style.display = "none";
+        return;
+    }
+
+    resultsDiv.style.display = "block";
+    resultsList.innerHTML = "";
+
+    // Обмежуємо кількість результатів до 6
+    const limitedResults = results.slice(0, 4);
+
+    limitedResults.forEach(product => {
+        const li = document.createElement("li");
+        li.textContent = product.name;
+        li.onclick = function() {
+            // Перехід на сторінку товару за абсолютним шляхом
+            window.location.href = product.url;
+        };
+        resultsList.appendChild(li);
+    });
+}
+
+// Закриває список результатів, якщо клік поза пошуком
+document.addEventListener("click", function(event) {
+    const searchBar = document.querySelector(".search-bar");
+    if (!searchBar.contains(event.target)) {
+        document.getElementById("search-results").style.display = "none";
+    }
+});
+
