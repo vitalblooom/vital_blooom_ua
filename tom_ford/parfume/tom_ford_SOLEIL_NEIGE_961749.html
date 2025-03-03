@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://github.com/vitalblooom/vital_blooom_ua/blob/main/img_for_index_html/IMG_9732-Photoroom.png?raw=true" sizes="32x32" type="image/png">
+    <title>Vital Blooom - TOM FORD SOLEIL NEIGE</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="../../index.js"></script>
+   <link rel="stylesheet" href="../../css_folder/product_page.css">
+
+</head>
+<body>
+    <div id="header"></div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+    <div class="product-page">
+        <div class="product-images">
+            <div class="main-image">
+                <img id="main-image" src="https://cms.brnstc.de/product_images/2244x3072p/cpro/s3li/1122x1536/19/10/888066093200_0.webp" alt="Основне зображення товару">
+            </div>
+            <div class="thumbnail-images">
+                <img src="https://cms.brnstc.de/product_images/2244x3072p/cpro/s3li/1122x1536/19/10/888066093200_0.webp" alt="Зображення 1" class="active" onclick="changeImage(this)">
+                <img src="https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/22/10/888066093200_1_1666340286023.webp" alt="Зображення 2" onclick="changeImage(this)">
+              <img src="https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/3/888066093200_2_1678948377914.webp" alt="Зображення 3" onclick="changeImage(this)">
+              <!--  <img src="https://www.victoriassecret.com/p/1000x1333/tif/zz/23/09/15/01/112285041343_OM_F.jpg" alt="Зображення 4" onclick="changeImage(this)">-->
+            </div>
+        </div>
+
+        <div class="product-details">
+            <h1>TOM FORD SOLEIL NEIGE</h1>
+
+            <div class="characteristics-perfume">
+                <p>Eau de Parfum</p>
+            </div>
+           
+            <div class="price">11 350 ₴</div>
+
+            <div class="size-container">
+                <div class="size-toggle" onclick="toggleSizeDropdown()">
+                    Розміри <span class="plus">+</span>
+                </div>
+                <div class="size-options">
+                    <button onclick="updateProductView(30, 6980)">30 ml</button>
+                    <button onclick="updateProductView(50, 11350)">50 ml</button>
+                    <button onclick="updateProductView(100, 14950)">100 ml</button>
+                </div>
+            </div>
+            <!----------------------->
+
+           <div class="back_line">
+            ___________________________
+           </div>
+            <br>
+            
+
+
+    
+                <div class="description-container">
+                    <div class="description-toggle" onclick="toggleDescriptionDropdown()">
+                        Опис <span class="plus_d">+</span>
+                    </div>
+                    <div class="description-options">
+                        <p>
+
+                            Кристалізуючий. Прохолодний. Відривний від реальності. <br>
+
+Захоплююча подорож Tom Ford Soleil проходить від Куршевеля до Мегева – натхнення для Soleil Neige. Новий аромат з колекції Private Blend відтворює своїм особливим сяйвом і легкістю, що відбивається від світла, спокійне сяйво сонця на засніженому ландшафті. Аромат відкривається яскравими нотами бергамоту та насіння моркви, що відображають зимове світло – холодне відображення сонця. Квіткова серцевина, що складається з пелюсток з елементів слонової кістки та троянди, нагадує про сяючє небо. Аромат свіжих зелених пелюсток жасмину, захоплюючих апельсинових квітів та білих кармафлорних нот поєднується з теплом турецької троянди. Деревина і мед, а також ваніль завершують аромат.
+<br>
+
+«Soleil Neige — це сонячна сторона Soleil, полярний вираз соняшників Soleil Blanc. Аромат сяє в зимовому світлі та імітує відблиск сонця на снігу.» — TOM FORD
+<br><br>
+Ноти аромату: <br>
+
+    Відкриваюча нота: бергамот, насіння моркви <br>
+    Серце: жасмин грандіфлорум, кармафлор каптив <br>
+    Базова нота: цистус, бензоїн <br>
+    <br>
+    Web-Code: 961749
+    
+                        </p>
+                    </div>
+                </div>
+
+            <!----------------------->
+             <br>
+
+            
+                
+                </p>
+           <a href="https://web.telegram.org/a/#7041780421 " target="_blank"> <button class="add-to-cart">Замовити в телеграм <i class='bx bxl-telegram'></i></button></a>
+        </div>
+    </div>
+</div>
+    
+   
+<div id="footer"></div>
+ 
+
+    <script>
+/*фунуціонал для опису товару*/
+function toggleDescriptionDropdown() {
+    var container = document.querySelector('.description-container');
+    var plusSign = container.querySelector('.plus_d');
+    var options = container.querySelector('.description-options');
+
+    container.classList.toggle('open');
+}
+
+
+
+
+
+
+
+
+// Залишаємо ваш існуючий код для роботи з кнопкою "+"
+
+document.querySelector('.plus').addEventListener('click', function() {
+    this.classList.toggle('active'); // Додає/видаляє клас active
+});
+
+function toggleSizeDropdown() {
+    document.querySelector('.size-options').classList.toggle('active');
+}
+
+// Оновлена функція для форматування ціни (залишаємо лише одну версію)
+function updatePrice(price) {
+    const formattedPrice = price.toLocaleString('uk-UA');  // Форматуємо число для української локалізації
+    document.querySelector('.price').textContent = formattedPrice + ' ₴';
+}
+
+// Об’єкт з посиланнями на зображення для кожного розміру
+const productImages = {
+    30: {
+        main: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/20/10/888066108614_0_1601985020730.webp', // URL повнорозмірного зображення для 30 ml
+        thumbnails: [
+            { thumb: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/20/10/888066108614_0_1601985020730.webp', full: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/20/10/888066108614_0_1601985020730.webp' },
+            { thumb: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/3/888066108614_1_1678948382043.webp', full: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/3/888066108614_1_1678948382043.webp' }
+        ]
+    },
+    50: {
+        main: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/s3li/1122x1536/19/10/888066093200_0.webp',
+        thumbnails: [
+            { thumb: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/s3li/1122x1536/19/10/888066093200_0.webp', full: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/s3li/1122x1536/19/10/888066093200_0.webp' },
+            { thumb: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/22/10/888066093200_1_1666340286023.webp', full: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/22/10/888066093200_1_1666340286023.webp' },
+            { thumb: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/3/888066093200_2_1678948377914.webp', full: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/3/888066093200_2_1678948377914.webp' }
+        ]
+    },
+    100: {
+        main: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/20/10/888066108607_0_1601985250812.webp',
+        thumbnails: [
+            { thumb: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/20/10/888066108607_0_1601985250812.webp', full: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/20/10/888066108607_0_1601985250812.webp' },
+            { thumb: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/3/888066108607_1_1678948373718.webp', full: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/3/888066108607_1_1678948373718.webp' }
+        ]
+    }
+};
+
+// Функція, яка оновлює перегляд товару (ціну та зображення) при виборі розміру
+function updateProductView(size, price) {
+    // Оновлюємо ціну
+    updatePrice(price);
+
+    // Отримуємо дані зображень для вибраного розміру
+    const images = productImages[size];
+    if (images) {
+        // Встановлюємо головне зображення (повнорозмірну картинку)
+        document.getElementById('main-image').src = images.main;
+
+        // Оновлюємо блок з мініатюрами:
+        const thumbnailsContainer = document.querySelector('.thumbnail-images');
+        thumbnailsContainer.innerHTML = ''; // Очищуємо поточні мініатюри
+
+        images.thumbnails.forEach((item, index) => {
+            const img = document.createElement('img');
+            // В якості зображення для мініатюри використовуємо URL маленького фото
+            img.src = item.thumb;
+            // Зберігаємо в data-атрибуті посилання на повнорозмірну версію
+            img.setAttribute('data-full', item.full);
+            img.alt = "Зображення " + (index + 1);
+            if (index === 0) {
+                img.classList.add('active'); // Перша мініатюра активна
+            }
+            img.onclick = function() {
+                changeImage(this);
+            };
+            thumbnailsContainer.appendChild(img);
+        });
+    }
+}
+
+// Модифікована функція для зміни головного зображення
+// Тепер вона читає URL повнорозмірного зображення з data-атрибута (якщо він є)
+function changeImage(thumbnail) {
+    const fullImageUrl = thumbnail.getAttribute('data-full') || thumbnail.src;
+    document.getElementById('main-image').src = fullImageUrl;
+
+    // Видаляємо клас 'active' у всіх мініатюр та додаємо для вибраної
+    document.querySelectorAll('.thumbnail-images img').forEach(img => img.classList.remove('active'));
+    thumbnail.classList.add('active');
+}
+
+
+ // Підключення хедера
+ fetch('../../header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        // Підключення футера
+        fetch('../../footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+
+    </script>
+
+
+
+</body>
+</html>

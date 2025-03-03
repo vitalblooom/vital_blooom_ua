@@ -36,7 +36,10 @@ const products = [
     { name: "Парфюм Tom Ford Soleil Blanc", url: "https://vitalblooom.github.io/vital_blooom_ua/tom_ford/parfume/tom_ford_SOLEIL%20BLANC_545917.html" },
     { name: "Парфюм Tom Ford Ombre Leather", url: "https://vitalblooom.github.io/vital_blooom_ua/tom_ford/parfume/tom_ford_OMBRE_LEATHER_849567.html" },
     { name: "Парфюм Tom Ford Electric Cherry", url: "https://vitalblooom.github.io/vital_blooom_ua/tom_ford/parfume/tom_ford_ELECTRIC_CHERRY_1438904.html" },
-    /*{ name: "Парфюм Tom Ford ", url: "" },*/ 
+    { name: "Парфюм Tom Ford Soleil Neige", url: "" },
+    { name: "Парфюм Tom Ford Vanille Fatale", url: "" },
+    { name: "Парфюм Tom Ford Mandarino Di Amalfi", url: "" },
+    { name: "Парфюм Tom Ford  Café Rose", url: "" },
 
 
     /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/

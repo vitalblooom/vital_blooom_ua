@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://github.com/vitalblooom/vital_blooom_ua/blob/main/img_for_index_html/IMG_9732-Photoroom.png?raw=true" sizes="32x32" type="image/png">
+    <title>Vital Blooom - TOM FORD VANILLE FATALE</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="../../index.js"></script>
+   <link rel="stylesheet" href="../../css_folder/product_page.css">
+
+</head>
+<body>
+    <div id="header"></div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+    <div class="product-page">
+        <div class="product-images">
+            <div class="main-image">
+                <img id="main-image" src="https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/12/888066150491_0_1702890001453.webp" alt="Основне зображення товару">
+            </div>
+            <div class="thumbnail-images">
+                <img src="https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/12/888066150491_0_1702890001453.webp" alt="Зображення 1" class="active" onclick="changeImage(this)">
+                <img src="https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/12/888066150491_1_1702890022498.webp" alt="Зображення 2" onclick="changeImage(this)">
+                <!--<img src="https://www.victoriassecret.com/p/1000x1333/tif/zz/23/09/15/01/112285041342_OM_F.jpg" alt="Зображення 3" onclick="changeImage(this)">
+                <img src="https://www.victoriassecret.com/p/1000x1333/tif/zz/23/09/15/01/112285041343_OM_F.jpg" alt="Зображення 4" onclick="changeImage(this)">-->
+            </div>
+        </div>
+
+        <div class="product-details">
+            <h1>TOM FORD VANILLE FATALE</h1>
+
+            <div class="characteristics-perfume">
+                <p>Eau de Parfum</p>
+            </div>
+           
+            <div class="price">14 950 ₴</div>
+
+            <div class="size-container">
+                <div class="size-toggle" onclick="toggleSizeDropdown()">
+                    Розміри <span class="plus">+</span>
+                </div>
+                <div class="size-options">
+                    <button onclick="updateProductView(30, 8890)">30 ml</button>
+                    <button onclick="updateProductView(50, 14950)">50 ml</button>
+                   
+                </div>
+            </div>
+            <!----------------------->
+
+           <div class="back_line">
+            ___________________________
+           </div>
+            <br>
+            
+
+
+    
+                <div class="description-container">
+                    <div class="description-toggle" onclick="toggleDescriptionDropdown()">
+                        Опис <span class="plus_d">+</span>
+                    </div>
+                    <div class="description-options">
+                        <p>
+                            VANILLE FATALE — це затемнення з темних дерев, спокусливого кавового абсолю та обсмаженого ячменю. Розкішний ванільний резиноїд захоплює в серці аромату своїм захоплюючим динамізмом.
+                                 <br><br>
+                            Ноти аромату:
+                             <br>
+                                Відкриваюча нота: акорди махагонового дерева <br>
+                                Серце: обсмажений ячмінь Орпур <br>
+                                Базова нота: ванільний резиноїд <br>
+                                <br>
+                                Web-Code: 1590545
+                        </p>
+                    </div>
+                </div>
+
+            <!----------------------->
+             <br>
+
+            
+                
+                </p>
+           <a href="https://web.telegram.org/a/#7041780421 " target="_blank"> <button class="add-to-cart">Замовити в телеграм <i class='bx bxl-telegram'></i></button></a>
+        </div>
+    </div>
+</div>
+    
+   
+<div id="footer"></div>
+ 
+
+    <script>
+/*фунуціонал для опису товару*/
+function toggleDescriptionDropdown() {
+    var container = document.querySelector('.description-container');
+    var plusSign = container.querySelector('.plus_d');
+    var options = container.querySelector('.description-options');
+
+    container.classList.toggle('open');
+}
+
+
+
+
+
+
+
+
+// Залишаємо ваш існуючий код для роботи з кнопкою "+"
+
+document.querySelector('.plus').addEventListener('click', function() {
+    this.classList.toggle('active'); // Додає/видаляє клас active
+});
+
+function toggleSizeDropdown() {
+    document.querySelector('.size-options').classList.toggle('active');
+}
+
+// Оновлена функція для форматування ціни (залишаємо лише одну версію)
+function updatePrice(price) {
+    const formattedPrice = price.toLocaleString('uk-UA');  // Форматуємо число для української локалізації
+    document.querySelector('.price').textContent = formattedPrice + ' ₴';
+}
+
+// Об’єкт з посиланнями на зображення для кожного розміру
+const productImages = {
+    30: {
+        main: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/12/888066150484_0_1702889996804.webp', // URL повнорозмірного зображення для 30 ml
+        thumbnails: [
+            { thumb: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/12/888066150484_0_1702889996804.webp', full: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/12/888066150484_0_1702889996804.webp' },
+            { thumb: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/12/888066150484_1_1702890017817.webp', full: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/12/888066150484_1_1702890017817.webp' }
+        ]
+    },
+    50: {
+        main: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/12/888066150491_0_1702890001453.webp',
+        thumbnails: [
+            { thumb: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/12/888066150491_0_1702890001453.webp', full: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/12/888066150491_0_1702890001453.webp' },
+            { thumb: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/12/888066150491_1_1702890022498.webp', full: 'https://cms.brnstc.de/product_images/2244x3072p/cpro/media/images/product/23/12/888066150491_1_1702890022498.webp' }
+        ]
+    },
+    
+};
+
+// Функція, яка оновлює перегляд товару (ціну та зображення) при виборі розміру
+function updateProductView(size, price) {
+    // Оновлюємо ціну
+    updatePrice(price);
+
+    // Отримуємо дані зображень для вибраного розміру
+    const images = productImages[size];
+    if (images) {
+        // Встановлюємо головне зображення (повнорозмірну картинку)
+        document.getElementById('main-image').src = images.main;
+
+        // Оновлюємо блок з мініатюрами:
+        const thumbnailsContainer = document.querySelector('.thumbnail-images');
+        thumbnailsContainer.innerHTML = ''; // Очищуємо поточні мініатюри
+
+        images.thumbnails.forEach((item, index) => {
+            const img = document.createElement('img');
+            // В якості зображення для мініатюри використовуємо URL маленького фото
+            img.src = item.thumb;
+            // Зберігаємо в data-атрибуті посилання на повнорозмірну версію
+            img.setAttribute('data-full', item.full);
+            img.alt = "Зображення " + (index + 1);
+            if (index === 0) {
+                img.classList.add('active'); // Перша мініатюра активна
+            }
+            img.onclick = function() {
+                changeImage(this);
+            };
+            thumbnailsContainer.appendChild(img);
+        });
+    }
+}
+
+// Модифікована функція для зміни головного зображення
+// Тепер вона читає URL повнорозмірного зображення з data-атрибута (якщо він є)
+function changeImage(thumbnail) {
+    const fullImageUrl = thumbnail.getAttribute('data-full') || thumbnail.src;
+    document.getElementById('main-image').src = fullImageUrl;
+
+    // Видаляємо клас 'active' у всіх мініатюр та додаємо для вибраної
+    document.querySelectorAll('.thumbnail-images img').forEach(img => img.classList.remove('active'));
+    thumbnail.classList.add('active');
+}
+
+
+ // Підключення хедера
+ fetch('../../header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        // Підключення футера
+        fetch('../../footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+
+    </script>
+
+
+
+</body>
+</html>
