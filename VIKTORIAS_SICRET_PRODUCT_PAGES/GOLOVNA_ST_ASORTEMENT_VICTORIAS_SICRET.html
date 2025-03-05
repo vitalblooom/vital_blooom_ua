@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://github.com/vitalblooom/vital_blooom_ua/blob/main/img_for_index_html/IMG_9732-Photoroom.png?raw=true" sizes="32x32" type="image/png">
+    <title>Vital Blooom - VICTORIA`S SECRET</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="../index.js"></script>
+    <link rel="stylesheet" href="../css_folder/index.css">
+<style>
+
+.product-item img {
+border-radius: 0;
+    width: 32%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Центрування */
+}
+
+
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .product {
+            background: hsl(0, 100%, 100%);
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+           /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            object-fit: cover; /* Зберігає пропорції зображення при заповненні контейнера */
+  transition: transform 0.3s ease; /* Анімація для плавного переходу */
+        }
+        .product:hover img{
+            transform: scale(1.05); /* Збільшення зображення на 20% при наведенні */
+        }
+
+        .product h3 {
+            color: #000000;
+            font-weight: normal;
+            text-align: center;
+            font-size: 15px;
+            margin: 10px 0 5px;
+        }
+
+        .product p {
+            text-align: left;
+            font-size: 15px;
+            color: #727272;
+        }
+
+        .product .price {
+            font-weight: normal;
+            text-align: left;
+            font-size: 15px;
+            color: #000000;
+            margin-top: 5px;
+        }
+
+        .logo-brand {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px; /* Відстань між картинками */
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto; /* Додає прокрутку, якщо контент перевищує ширину */
+            white-space: nowrap; /* Забезпечує горизонтальне розташування */
+        }
+
+        .logo-brand img {
+            height: 150px; /* Висота логотипів */
+            object-fit: contain;
+            cursor: pointer;
+            pointer-events: none;
+        }
+
+
+        @media (max-width: 576px){
+            .product-item img {
+              width: 50%;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .catalog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .catalog-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+</style>
+
+    
+</head>
+
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  
+
+
+<body>
+    <div id="header"></div>
+
+
+        <div class="product-grid" id="productGrid">
+            <div class="product-item">
+               <a href=""> <img src="https://upload.wikimedia.org/wikipedia/uk/thumb/5/56/%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_Chanel.svg/4529px-%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF_Chanel.svg.png" alt="Товар 1"></a> 
+            </div>
+            
+            <div class="product-item">
+               <a href=""> <img src="https://piramida.ua/wp-content/uploads/2024/06/VS-scaled.jpg" alt="Товар 3"></a>
+            </div>
+            
+            
+        </div>
+
+
+         <br>
+         <br>
+         
+        <hr style="border: none; height: 1px; background-color: gray;">
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="logo-brand">
+    <img src="https://piramida.ua/wp-content/uploads/2024/06/VS-scaled.jpg" alt="Brand 3">
+</div>
+
+<br>
+
+<br>
+<br>
+
+
+        <div class="catalog-grid">
+
+
+           <a href="../VIKTORIAS_SICRET_PRODUCT_PAGES/sprei_dla_tila.html">
+            <div class="product">
+                <img src="https://de.victoriassecret.com/p/1000x1333/tif/cd/13/cd136324437645c488c246d31e390e91/112047171340_OF_F.jpg" alt="Товар 1">
+                <h3>СПРЕЇ ДЛЯ ТІЛА</h3>
+            </div>
+           </a>
+
+           <a href="../VIKTORIAS_SICRET_PRODUCT_PAGES/losyonu_dla_tila.html">
+            <div class="product">
+                <img src="https://de.victoriassecret.com/p/1000x1333/png/zz/23/10/11/01/112145531340_OF_F.jpg" alt="Товар 1">
+                <h3>ЛОСЙОНИ ДЛЯ ТІЛА</h3>
+            </div>
+           </a>
+
+           <a href="../VIKTORIAS_SICRET_PRODUCT_PAGES/geli_ta_scrabu.html">
+            <div class="product">
+                <img src="https://de.victoriassecret.com/p/1000x1333/png/zz/24/08/10/04/112537016150_OM_F.jpg" alt="Товар 1">
+                <h3>ГЕЛІ ТА СКРАБИ</h3>
+            </div>
+           </a>
+
+           <a href="../VIKTORIAS_SICRET_PRODUCT_PAGES/balzamu_dla_gub.html">
+            <div class="product">
+                <img src="https://de.victoriassecret.com/p/1000x1333/png/zz/24/09/05/02/11249102067O_OM_F.jpg" alt="Товар 1">
+                <h3>БАЛЬЗАМ ДЛЯ ГУБ</h3>
+            </div>
+           </a>
+
+           <a href="../VIKTORIAS_SICRET_PRODUCT_PAGES/kosmetuchku.html">
+            <div class="product">
+                <img src="https://de.victoriassecret.com/p/1000x1333/png/zz/24/08/01/03/1125612271IB_OM_F.jpg" alt="Товар 1">
+                <h3>КОСМЕТИЧКИ</h3>
+            </div>
+           </a>
+    
+         
+        </div>
+    
+    </main>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    
+   
+    
+   
+   
+    <div id="footer"></div>
+
+
+
+    <script>
+        // Підключення хедера
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        // Підключення футера
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+
+
+
+//налаштування для плиток екфект 
+document.addEventListener("DOMContentLoaded", function () {
+            const productGrid = document.getElementById("productGrid");
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        productGrid.style.opacity = "1";
+                        productGrid.style.transform = "translateY(0)";
+                    } else {
+                        productGrid.style.opacity = "0";
+                        productGrid.style.transform = "translateY(50px)";
+                    }
+                });
+            }, { threshold: 0.3 });
+            observer.observe(productGrid);
+        });
+
+    </script>
+     
+</body>
+</html>
